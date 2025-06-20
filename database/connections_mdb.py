@@ -10,7 +10,9 @@ myclient = pymongo.MongoClient(DATABASE_URI)
 mydb = myclient[DATABASE_NAME]
 mycol = mydb['CONNECTION']  
 
-myclient2 = pymongo.MongoClient(SECONDDB_URI)
+import os
+DATABASE_URI = os.environ.get("DATABASE_URI")
+SECONDDB_URI = os.environ.get("SECONDDB_URI")
 mydb2 = myclient2[DATABASE_NAME]
 mycol2 = mydb2['CONNECTION']  
 
