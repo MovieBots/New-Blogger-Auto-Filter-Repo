@@ -1,7 +1,10 @@
 import pymongo
 
 from sample_info import tempDict
-from info import DATABASE_URI, DATABASE_NAME, SECONDDB_URI
+from info import DATABASE_NAME
+import os
+DATABASE_URI = os.environ.get("DATABASE_URI")
+SECONDDB_URI = os.environ.get("SECONDDB_URI")
 import logging
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
