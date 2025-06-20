@@ -7,8 +7,6 @@ from info import DATABASE_NAME, DATABASE_URI, CUSTOM_FILE_CAPTION, IMDB, IMDB_TE
 import time
 import datetime
 
-import os
-DATABASE_URI = os.environ.get("DATABASE_URI")
 my_client = MongoClient(DATABASE_URI)
 mydb = my_client["referal_user"]
 
