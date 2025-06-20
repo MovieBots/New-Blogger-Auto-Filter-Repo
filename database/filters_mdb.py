@@ -1,8 +1,5 @@
 import pymongo
-from info import DATABASE_NAME
-import os
-DATABASE_URI = os.environ.get("DATABASE_URI")
-SECONDDB_URI = os.environ.get("SECONDDB_URI")
+from info import DATABASE_URI, DATABASE_NAME, SECONDDB_URI
 from pyrogram import enums
 import logging
 from sample_info import tempDict
@@ -10,12 +7,9 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 
 myclient = pymongo.MongoClient(DATABASE_URI)
-myclient2 = pymongo.MongoClient(SECONDDB_URI)
 mydb = myclient[DATABASE_NAME]
 
-import os
-DATABASE_URI = os.environ.get("DATABASE_URI")
-SECONDDB_URI = os.environ.get("SECONDDB_URI")
+myclient2 = pymongo.MongoClient(SECONDDB_URI)
 mydb2 = myclient2[DATABASE_NAME]
 
 
