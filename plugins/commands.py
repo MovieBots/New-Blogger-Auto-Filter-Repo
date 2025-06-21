@@ -454,7 +454,7 @@ async def start(client, message):
         settings = await get_settings(chat_id)
         files_ = await get_file_details(file_id)
         files = files_[0]
-        r = f"{WEBSITE_URL}?Naman=file_{file_id}"
+        r = f"{WEBSITE_URL}?Arpit=file_{file_id}"
         k = await client.send_message(chat_id=user,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {r}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else</i></b>", reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -579,7 +579,7 @@ async def start(client, message):
         if WEBSITE_URL_MODE == True:
             files_ = await get_file_details(file_id)
             files = files_[0]
-            r = f"{WEBSITE_URL}?Naman=file_{file_id}"
+            r = f"{WEBSITE_URL}?Arpit=file_{file_id}"
             k = await client.send_message(chat_id=message.from_user.id,text=f"<b>📕Nᴀᴍᴇ ➠ : <code>{files.file_name}</code> \n\n🔗Sɪᴢᴇ ➠ : {get_size(files.file_size)}\n\n📂Fɪʟᴇ ʟɪɴᴋ ➠ : {r}\n\n<i>Note: This message is deleted in 20 mins to avoid copyrights. Save the link to Somewhere else</i></b>", reply_markup=InlineKeyboardMarkup(
                     [
                         [
