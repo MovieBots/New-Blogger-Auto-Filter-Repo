@@ -88,7 +88,7 @@ async def leave_a_chat(bot, message):
         chat = chat
     try:
         buttons = [[
-            InlineKeyboardButton('Support Group',url="https://t.me/MovieTimesXDisc"),
+            InlineKeyboardButton('Support Group',url="https://t.me/+Kqdy_7kQyt01N2U1"),
             InlineKeyboardButton("Bᴏᴛ Oᴡɴᴇʀ", url="t.me/Arpitbotmovies")
         ],[
             InlineKeyboardButton('Use Me Here', url=f'https://t.me/{SUPPORT_CHAT}')
