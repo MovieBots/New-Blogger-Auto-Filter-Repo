@@ -147,7 +147,7 @@ async def auto_approve(client, message: ChatJoinRequest):
             settings = await get_settings(chat_id)
             files_ = await get_file_details(file_id)
             files = files_[0]
-            r = f"{WEBSITE_URL}?Naman=file_{file_id}"
+            r = f"{WEBSITE_URL}?Arpit=file_{file_id}"
             button = [[
                 InlineKeyboardButton('📂 Dᴏᴡɴʟᴏᴀᴅ Nᴏᴡ 📂', url=r)
             ]]
